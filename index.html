@@ -13,13 +13,33 @@
 </head>
 
 <body>
+  <main>
+    <header>
+      <img src="./images/logo.svg" alt="base apparel logo" />
+    </header>
+    <figure>
+      <picture>
+        <source media="(max-width:1023px)" srcset="./images/hero-mobile.jpg" />
+        <source media="(min-width:1024px)" srcset="./images/hero-desktop.jpg" />
+        <img src="./images/hero-desktop.jpg" alt="image hero" />
+      </picture>
+    </figure>
+    <div class="content">
+      <h1><span>We're</span> coming soon</h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  We're coming soon
+      <form>
+        <div class="input-wrapper">
+          <input type="email" id="email-input">
+          <img src="./images/icon-error.svg" alt="icon error">
+        </div>
+        <button type="submit">send <img src="./images/icon-arrow.svg" alt="icon arrow"></button>
+      </form>
+      Email Address
+    </div>
+  </main>
 
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
 
 </body>
 
