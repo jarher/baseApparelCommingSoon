@@ -18,12 +18,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   position: relative;
-}
-main {
   height: 100%;
+  background: url("../../images/bg-pattern-desktop.svg") no-repeat left / 58%,
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
+
 header {
   height: 5.24rem;
   display: flex;
@@ -125,9 +125,13 @@ form::after {
 button {
   background: linear-gradient(
     135deg,
-    hsl(0, 80%, 86%) 0%,
-    hsl(0, 74%, 74%) 100%
+    hsl(0, 80%, 86%) 50%,
+    hsl(0, 74%, 74%) 100%,
+    hsl(0, 0%, 100%) 50%,
+    hsl(0, 80%, 86%) 100%
   );
+  background-size: 200% 100%;
+  background-position: -100%;
   box-shadow: 0 9px 8px 3px hsla(0, 36%, 70%, 0.224);
   border: none;
   border-radius: 2rem;
@@ -140,6 +144,7 @@ button {
   justify-content: center;
   outline: transparent;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 button img {
   position: absolute;
@@ -149,12 +154,9 @@ button img {
   left: 0;
   margin: auto;
 }
-button[type="submit"]:hover {
-  background-color: linear-gradient(
-    135deg,
-    hsl(0, 0%, 100%),
-    hsl(0, 100%, 98%)
-  );
+button:hover {
+  background-position: 0%;
+  box-shadow: 0 9px 8px 3px hsla(0, 36%, 70%, 0.424);
 }
 .alert-success {
   position: absolute;
@@ -228,6 +230,9 @@ button[type="submit"]:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
   main {
     padding-left: 6.25rem;
   }
@@ -250,25 +255,31 @@ button[type="submit"]:hover {
     text-align: left;
   }
   .content h1 {
-    font-size: 4rem;
+    font-size: 4.3rem;
+    font-weight: 600;
     margin: 0;
-    line-height: 4.9375rem;
+    line-height: 4.3375rem;
+    width: 23.5rem;
   }
 
   .content p {
     padding: 0;
+    font-size: 1.0075rem;
   }
 }
 @media screen and (min-width: 1200px) {
+  main {
+    padding-left: 10rem;
+  }
   header {
     padding-top: 10rem;
   }
   .content {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 250px);
   }
   .content p,
   form {
-    width: 32.56rem;
+    width: 27.56rem;
   }
 }
 @media screen and (min-width: 1440px) {
