@@ -79,6 +79,7 @@ form {
 }
 form::after {
   bottom: -2rem;
+  content: "Please provide a valid email";
   left: 1.5rem;
   color: var(--Soft-Red);
   position: absolute;
@@ -90,7 +91,6 @@ form::after {
 }
 .input-error::after {
   opacity: 1;
-  content: "Please provide a valid email";
 }
 .input-error .icon-error {
   opacity: 1;
@@ -157,6 +157,7 @@ button img {
 button:hover {
   background-position: 0%;
   box-shadow: 0 9px 8px 3px hsla(0, 36%, 70%, 0.424);
+  transform: scale(1.05);
 }
 .alert-success {
   position: absolute;
